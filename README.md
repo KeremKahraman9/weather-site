@@ -1,24 +1,8 @@
-# README
+### This project not deployed to prod environment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- This is basic weather app.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+> [!TIP]
+> Rails 7
+> Ruby 3.2.1
+> Open Weather Map API
