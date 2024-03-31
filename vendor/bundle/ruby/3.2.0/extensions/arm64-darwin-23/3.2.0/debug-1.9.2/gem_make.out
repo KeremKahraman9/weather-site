@@ -1,0 +1,20 @@
+current directory: /Users/keremkahraman/Labs/weather_site/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+/Users/keremkahraman/.rbenv/versions/3.2.1/bin/ruby -I /Users/keremkahraman/.rbenv/versions/3.2.1/lib/ruby/3.2.0 extconf.rb
+creating Makefile
+
+current directory: /Users/keremkahraman/Labs/weather_site/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240331-71201-nynbza sitelibdir\=./.gem.20240331-71201-nynbza clean
+
+current directory: /Users/keremkahraman/Labs/weather_site/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240331-71201-nynbza sitelibdir\=./.gem.20240331-71201-nynbza
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/keremkahraman/Labs/weather_site/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240331-71201-nynbza sitelibdir\=./.gem.20240331-71201-nynbza install
+/opt/homebrew/bin/ginstall -c -m 0755 debug.bundle ./.gem.20240331-71201-nynbza/debug
+
+current directory: /Users/keremkahraman/Labs/weather_site/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240331-71201-nynbza sitelibdir\=./.gem.20240331-71201-nynbza clean
