@@ -1,8 +1,6 @@
 ### This project not deployed to prod environment
 
-- This is basic weather app.
+WeatherSite is a very simple web application that automatically detects your location and displays the current weather conditions. This application is designed to provide you with the latest weather updates.
 
-> [!TIP]
-> Rails 7
-> Ruby 3.2.1
-> Open Weather Map API
+> [!NOTE]
+> Rails 7 - Ruby 3 - Open Weather Map API
