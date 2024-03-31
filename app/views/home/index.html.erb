@@ -1,5 +1,4 @@
 <div class="grid place-items-center h-full">
-
   <img src="https://openweathermap.org/img/wn/<%= @data["weather"].first["icon"] %>@2x.png">
   <p><%= Date.today.strftime("%A, %B, %d") %></p>
   <p><%= "#{@data["main"]["temp"].to_i}°C" %></p>
