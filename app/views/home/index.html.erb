@@ -1,11 +1,35 @@
-<div class="grid place-items-center h-full">
-  <img src="https://openweathermap.org/img/wn/<%= @data["weather"].first["icon"] %>@2x.png">
-  <p><%= Date.today.strftime("%A, %B, %d") %></p>
-  <p><%= "#{@data["main"]["temp"].to_i}°C" %></p>
-  <p>-------------------------------------</p>
-  <p><%= Date.today.strftime("%A, %B %d") %></p>
-  <img src="https://openweathermap.org/img/wn/<%= @data["weather"].first["icon"] %>@2x.png">
-  <p><%= @data[ "weather"].first["main"] %></p>
-  <p class="text-xs"><%= @data["weather"].first["description"] %></p>
-  <p><%= "#{@data["main"]["temp"].to_i}°C" %></p>
+
+<div class="flex justify-center items-center h-screen">
+  <div class="text-center">
+    <p class="mb-2.5 font-sans capitalize">Please allow location request to your browser</p>
+    <button id="getLocation" type="button" class="inline-flex items-center gap-x-1.5 rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+      See The Weather
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </svg>
+    </button>
+  </div>
 </div>
+
+
+<%= form_with(url: weather_path, method: :post, id: 'locationForm', style: "display:none;") do |form| %>
+  <%= form.hidden_field :lat, id: 'lat' %>
+  <%= form.hidden_field :lon, id: 'lon' %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+<% end %>
+
+<script>
+document.getElementById('getLocation').addEventListener('click', function() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      document.getElementById('lat').value = position.coords.latitude;
+      document.getElementById('lon').value = position.coords.longitude;
+      document.getElementById('locationForm').submit();
+    }, function(error) {
+      alert("Konum bilgisi alınamadı: " + error.message);
+    });
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+});
+</script>
